@@ -6,7 +6,7 @@ import Button from 'styled/Button';
 import Label from 'styled/Label';
 import axios from 'utils/api';
 import { useForm } from 'react-hook-form';
-import { withRouter, Link as RouterLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 interface IFormInput {
   email: string;

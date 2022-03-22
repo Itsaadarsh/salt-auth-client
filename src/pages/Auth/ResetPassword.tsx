@@ -6,7 +6,7 @@ import Button from 'styled/Button';
 import Label from 'styled/Label';
 import axios from 'utils/api';
 import { useForm } from 'react-hook-form';
-import { withRouter, Link as RouterLink, useHistory } from 'react-router-dom';
+import { withRouter, useHistory } from 'react-router-dom';
 
 interface IFormInput {
   password: string;
@@ -50,7 +50,8 @@ const Error = styled.label`
 
 const ResetPassword = () => {
   const [loading, setLoading] = useState(false);
-  const [error, _] = useState<{ data: { message: String[] }; error: boolean } | null>(null);
+  const [error, setError] = useState<{ data: { message: String[] }; error: boolean } | null>(null);
+  console.log(setError);
 
   const { register, handleSubmit } = useForm<IFormInput>({
     mode: 'all',

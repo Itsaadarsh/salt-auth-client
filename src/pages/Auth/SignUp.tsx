@@ -5,7 +5,7 @@ import Button from 'styled/Button';
 import Label from 'styled/Label';
 import axios from 'utils/api';
 import { useForm } from 'react-hook-form';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import { setCookie } from 'utils/cookie';
 
