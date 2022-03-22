@@ -6,7 +6,7 @@ import Label from 'styled/Label';
 import axios from 'utils/api';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import { Link as RouterLink, useHistory, withRouter } from 'react-router-dom';
 import { setCookie } from 'utils/cookie';
 
 interface IFormInput {
@@ -75,6 +75,8 @@ const SignUp = ({ setToken }: any) => {
     mode: 'all',
   });
 
+  const history = useHistory();
+
   const onSubmit = (data: IFormInput) => {
     setLoading(true);
     axios
@@ -86,6 +88,7 @@ const SignUp = ({ setToken }: any) => {
       .then(({ data }) => {
         setCookie('token', data.data.token);
         setToken(data.data.token);
+        history.push('/login');
       })
       .catch(({ response }) => {
         setError(response.data);
