@@ -48,17 +48,7 @@ const Error = styled.label`
   margin-bottom: 10px;
 `;
 
-const Link = styled(RouterLink)`
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: ${p => p.theme.colors.main};
-  margin-top: 10px;
-  text-decoration: none;
-`;
-
-const ForgotPassword = ({ setToken }: any) => {
+const ForgotPassword = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<{ data: { message: String[] }; error: boolean } | null>(null);
 

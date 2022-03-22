@@ -45,16 +45,8 @@ const AuthLayout = ({ handleUserData, setToken }: any) => {
           path={LOG_IN}
           render={() => <LogIn handleUserData={handleUserData} setToken={setToken} />}
         />
-        <Route
-          exact
-          path={FORGOT_PASSWORD}
-          render={() => <ForgetPassword handleUserData={handleUserData} setToken={setToken} />}
-        />
-        <Route
-          exact
-          path={RESET_PASSWORD}
-          render={() => <ResetPassword handleUserData={handleUserData} setToken={setToken} />}
-        />
+        <Route exact path={FORGOT_PASSWORD} render={() => <ForgetPassword />} />
+        <Route exact path={RESET_PASSWORD} render={() => <ResetPassword />} />
         <Route
           exact
           path={SIGN_UP}

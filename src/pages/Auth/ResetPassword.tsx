@@ -48,19 +48,9 @@ const Error = styled.label`
   margin-bottom: 10px;
 `;
 
-const Link = styled(RouterLink)`
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: ${p => p.theme.colors.main};
-  margin-top: 10px;
-  text-decoration: none;
-`;
-
-const ResetPassword = ({ setToken }: any) => {
+const ResetPassword = () => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<{ data: { message: String[] }; error: boolean } | null>(null);
+  const [error, _] = useState<{ data: { message: String[] }; error: boolean } | null>(null);
 
   const { register, handleSubmit } = useForm<IFormInput>({
     mode: 'all',

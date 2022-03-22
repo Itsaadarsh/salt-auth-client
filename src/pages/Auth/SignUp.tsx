@@ -26,31 +26,10 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const HFlex = styled.div`
-  display: flex;
-  margin-bottom: 12px;
-`;
-
 interface VFlexProps {
   ml?: string;
   mr?: string;
 }
-
-const VFlex = styled.div<VFlexProps>`
-  display: flex;
-  flex-direction: column;
-
-  ${p =>
-    p.ml &&
-    css`
-      margin-left: ${p.ml};
-    `}
-  ${p =>
-    p.mr &&
-    css`
-      margin-right: ${p.mr};
-    `}
-`;
 
 const MinLabel = styled(Label)`
   font-size: 10px;
